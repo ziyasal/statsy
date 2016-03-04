@@ -1,6 +1,6 @@
 # statsy
 calculates the  median and average using count sort   
-[![Build Status](https://travis-ci.org/ziyasal/statsy.svg?branch=master)](https://travis-ci.org/ziyasal/statsy)  [![Coverage Status](https://coveralls.io/repos/github/ziyasal/statsy/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/statsy?branch=master)
+[![Build Status](https://travis-ci.org/ziyasal/statsy.svg?branch=master)](https://travis-ci.org/ziyasal/statsy)   [![Coverage Status](https://coveralls.io/repos/github/ziyasal/statsy/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/statsy?branch=master)
 
  ###Install Dependencies
  
