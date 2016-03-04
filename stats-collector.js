@@ -36,9 +36,8 @@ class StatsCollector {
     }
 
     __getNext(index) {
-        for (var i = index; i < this._responseArray.length; i++) {
-            if (this._responseArray[i] !== 0) return i;
-        }
+        for (; index < this._responseArray.length && this._responseArray[index] === 0; index++);
+        return index;
     }
 }
 
