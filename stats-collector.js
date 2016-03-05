@@ -15,9 +15,7 @@ class StatsCollector {
     }
 
     getMedian() {
-        var mid = this.total / 2.0;
-        var even = this.total % 2;
-        var tmpSum = 0;
+        var mid = this.total / 2.0, even = this.total % 2, tmpSum = 0;
         for (var i = 0; i < this._responseArray.length; i++) {
             tmpSum += this._responseArray[i];
             if (tmpSum >= mid) return even === 0 ? ( i + this.__getNext(i)) / 2 : i;
