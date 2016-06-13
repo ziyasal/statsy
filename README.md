@@ -13,9 +13,6 @@ calculates the  median and average using count sort
  ```sh
  sudo npm install
  ```
-
- ### Commands
- 
  **Start App**
  ```js
 npm start
