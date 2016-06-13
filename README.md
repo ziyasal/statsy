@@ -18,13 +18,7 @@ calculates the  median and average using count sort
  
  **Start App**
  ```js
-//Start Workers up to size that determined in config file (for example:3)
-node main.js --role='WORKER'
-node main.js --role='WORKER'
-node main.js --role='WORKER'
-
-//Start Master
-node main.js --role='MASTER'
+npm start
  ```
  
  **Test**
