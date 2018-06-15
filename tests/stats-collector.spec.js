@@ -9,9 +9,8 @@ describe("StatsCollector:", function () {
     let sut;
 
     before(function () {
-        sut = new StatsCollector();
-
         var sampleResponseTimes = [1, 2, 3, 4, 5];
+        sut = new StatsCollector(5);
 
         sampleResponseTimes.forEach(item => {
             sut.pushValue(item);
