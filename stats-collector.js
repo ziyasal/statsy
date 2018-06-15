@@ -1,12 +1,11 @@
 'use strict';
 const _ = require('lodash');
-const constants = require('./constants');
 const BigInteger = require('node-biginteger');
 
 class StatsCollector {
-    constructor() {
+    constructor(arraySize) {
         this.total = 0;
-        this._responseArray = _.times(constants.MAX_RESPONSE_TIME, _.constant(0));
+        this._responseArray = _.times(arraySize, _.constant(0));
     }
 
     pushValue(value) {
@@ -18,7 +17,7 @@ class StatsCollector {
         var mid = this.total / 2.0, even = this.total % 2, tmpSum = 0;
         for (var i = 0; i < this._responseArray.length; i++) {
             tmpSum += this._responseArray[i];
-            if (tmpSum >= mid) return even === 0 ? ( i + this.__getNext(i)) / 2 : i;
+            if (tmpSum >= mid) return even === 0 ? ( i + this.__getNextIndex(i)) / 2 : i;
         }
     }
 
@@ -33,7 +32,7 @@ class StatsCollector {
         return div.longValue();
     }
 
-    __getNext(index) {
+    __getNextIndex(index) {
         for (; index < this._responseArray.length && this._responseArray[index] === 0; index++);
         return index;
     }
