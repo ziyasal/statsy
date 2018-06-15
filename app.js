@@ -8,7 +8,7 @@ const MIN_RESPONSE_TIME_IN_MS = 15;
 const SEED_DATA_SIZE = 100000;
 
 function main() {
-    let statsCalculator = new StatsCollector();
+    let statsCalculator = new StatsCollector(MAX_RESPONSE_TIME_IN_MS);
     
     for (var i = 0; i < SEED_DATA_SIZE; i++) {
        statsCalculator.pushValue(_.random(MIN_RESPONSE_TIME_IN_MS, MAX_RESPONSE_TIME_IN_MS))
